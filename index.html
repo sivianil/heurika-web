@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEURIKA | Transparent Media Architecture & Visual Systems India</title>
+    <meta name="description" content="Heurika is an enterprise systems integration firm delivering ultra-high-transparency LED media glass, digital facades, and intelligent visual experiences across India.">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        mono: ['"JetBrains Mono"', 'monospace'],
+                    },
+                    colors: {
+                        obsidian: '#06080E',
+                        slateGlass: 'rgba(15, 23, 42, 0.65)',
+                        cyanGlow: '#00F0FF',
+                        electricBlue: '#2563EB',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #06080E;
+            color: #F8FAFC;
+        }
+        /* Custom Transparent LED Grid Effect */
+        .led-grid-bg {
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, rgba(0, 240, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0, 240, 255, 0.05) 1px, transparent 1px);
+        }
+        .glass-card {
+            background: rgba(15, 23, 42, 0.55);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card:hover {
+            border-color: rgba(0, 240, 255, 0.4);
+            box-shadow: 0 0 30px -10px rgba(0, 240, 255, 0.25);
+            transform: translateY(-4px);
+        }
+        .glow-text {
+            background: linear-gradient(90deg, #FFFFFF 0%, #94A3B8 50%, #00F0FF 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-cyanGlow selection:text-obsidian">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-gradient-to-r from-slate-900 via-blue-950 to-slate-900 border-b border-white/10 text-xs py-2.5 px-4 text-center font-mono text-cyan-300">
+        <span class="inline-block w-2 h-2 rounded-full bg-cyanGlow animate-pulse mr-2"></span>
+        ENTERPRISE ARCHITECTURAL VISUAL SYSTEMS • INDIA OPERATIONS (HYDERABAD • BENGALURU • MUMBAI • DELHI-NCR)
+    </div>
+
+    <!-- Navigation -->
+    <header class="sticky top-0 z-50 bg-obsidian/80 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center space-x-3 group">
+                <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-cyanGlow to-blue-600 p-[1px]">
+                    <div class="w-full h-full bg-obsidian rounded-lg flex items-center justify-center">
+                        <span class="font-mono font-bold text-xl text-cyanGlow tracking-tighter">H</span>
+                    </div>
+                </div>
+                <div>
+                    <span class="text-xl font-extrabold tracking-widest text-white block leading-none">HEURIKA</span>
+                    <span class="text-[10px] font-mono text-slate-400 tracking-widest uppercase">Visual Technologies</span>
+                </div>
+            </a>
+
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
+                <a href="#solutions" class="hover:text-cyanGlow transition">Solutions</a>
+                <a href="#technology" class="hover:text-cyanGlow transition">3D-SMT™ & Glass Tech</a>
+                <a href="#execution" class="hover:text-cyanGlow transition">Turnkey Execution</a>
+                <a href="#sectors" class="hover:text-cyanGlow transition">Verticals</a>
+            </nav>
+
+            <div class="flex items-center space-x-4">
+                <a href="#contact" class="px-5 py-2.5 rounded-lg bg-white text-obsidian font-semibold text-sm hover:bg-cyanGlow transition shadow-lg shadow-cyanGlow/10">
+                    Specify a Project
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden pt-20 pb-28 md:pt-28 md:pb-36 led-grid-bg border-b border-white/10">
+        <!-- Ambient Background Glow -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-cyanGlow/10 rounded-full blur-[130px] pointer-events-none"></div>
+        <div class="absolute bottom-0 right-10 w-[400px] h-[300px] bg-blue-600/15 rounded-full blur-[120px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="max-w-4xl">
+                <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 text-cyanGlow text-xs font-mono mb-8">
+                    <i data-lucide="layers" class="w-3.5 h-3.5"></i>
+                    <span>NEXT-GENERATION TRANSPARENT MEDIA ARCHITECTURE</span>
+                </div>
+                
+                <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.08] mb-8 glow-text">
+                    Transforming Indian Skylines with See-Through Digital Glass.
+                </h1>
+
+                <p class="text-lg sm:text-xl text-slate-300 leading-relaxed max-w-3xl mb-10 font-light">
+                    Heurika is an enterprise systems integration partner delivering ultra-high-transparency LED media facades, photoelectric architectural glass, and daylight-visible retail displays across India’s premier commercial developments.
+                </p>
+
+                <div class="flex flex-wrap gap-4 mb-16">
+                    <a href="#solutions" class="px-7 py-4 rounded-xl bg-gradient-to-r from-cyanGlow to-blue-500 text-obsidian font-bold text-sm tracking-wide hover:opacity-95 transition flex items-center space-x-2">
+                        <span>Explore Product Series</span>
+                        <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                    </a>
+                    <a href="#execution" class="px-7 py-4 rounded-xl bg-white/5 border border-white/15 text-white font-semibold text-sm hover:bg-white/10 transition">
+                        Our Indian Execution Capabilities
+                    </a>
+                </div>
+            </div>
+
+            <!-- Key Telemetry / Spec Metrics -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 pt-8 border-t border-white/10">
+                <div class="glass-card p-6 rounded-2xl">
+                    <div class="text-cyanGlow font-mono text-3xl sm:text-4xl font-bold mb-1">65–90%</div>
+                    <div class="text-xs font-mono uppercase tracking-wider text-slate-400">Optical Transparency</div>
+                    <p class="text-xs text-slate-500 mt-2">Preserves natural interior daylight & architectural sightlines.</p>
+                </div>
+                <div class="glass-card p-6 rounded-2xl">
+                    <div class="text-white font-mono text-3xl sm:text-4xl font-bold mb-1">7,500 <span class="text-lg text-cyanGlow">Nits</span></div>
+                    <div class="text-xs font-mono uppercase tracking-wider text-slate-400">Peak Daylight Brightness</div>
+                    <p class="text-xs text-slate-500 mt-2">Crystal-clear visibility under harsh Indian tropical sunlight.</p>
+                </div>
+                <div class="glass-card p-6 rounded-2xl">
+                    <div class="text-white font-mono text-3xl sm:text-4xl font-bold mb-1">-30%</div>
+                    <div class="text-xs font-mono uppercase tracking-wider text-slate-400">Power Consumption</div>
+                    <p class="text-xs text-slate-500 mt-2">High thermal efficiency vs. legacy opaque SMD LED walls.</p>
+                </div>
+                <div class="glass-card p-6 rounded-2xl">
+                    <div class="text-cyanGlow font-mono text-3xl sm:text-4xl font-bold mb-1">&lt;1.6mm</div>
+                    <div class="text-xs font-mono uppercase tracking-wider text-slate-400">Ultra-Slim PCB Profile</div>
+                    <p class="text-xs text-slate-500 mt-2">Imperceptible strips from a 3-meter viewing distance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Infrastructure Bridge Section -->
+    <section class="py-24 bg-slate-950/60 border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6">
+                    <span class="text-cyanGlow font-mono text-xs uppercase tracking-widest block mb-3">// THE ARCHITECTURAL DILEMMA</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold tracking-tight mb-6">
+                        Why Conventional Opaque LED Walls Fail Modern Architecture
+                    </h2>
+                    <p class="text-slate-300 leading-relaxed mb-6">
+                        As India’s Grade-A commercial real estate, transit infrastructure, and luxury retail sectors modernize, traditional black-cabinet LED screens create severe architectural bottlenecks: they block natural sunlight, require heavy structural steel retrofitting, trap heat against glazing, and violate municipal facade aesthetics.
+                    </p>
+                    <p class="text-slate-400 leading-relaxed mb-8">
+                        <strong class="text-white">Heurika bridges tier-1 global transparent LED invention with precision Indian field engineering.</strong> We work directly with master architects, facade consultants, and MEP engineers to integrate featherweight, see-through media systems directly behind existing curtain walls.
+                    </p>
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div class="flex items-start space-x-3">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-cyanGlow shrink-0 mt-0.5"></i>
+                            <span class="text-sm text-slate-200">Zero structural facade modification required</span>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-cyanGlow shrink-0 mt-0.5"></i>
+                            <span class="text-sm text-slate-200">Indoor installation with outdoor daylight impact</span>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-cyanGlow shrink-0 mt-0.5"></i>
+                            <span class="text-sm text-slate-200">Single-bin LED batch color consistency</span>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-cyanGlow shrink-0 mt-0.5"></i>
+                            <span class="text-sm text-slate-200">Turnkey BIS compliance & local SLA bench</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Visual Comparison Card -->
+                <div class="lg:col-span-6">
+                    <div class="glass-card rounded-3xl p-8 border border-cyanGlow/20 relative overflow-hidden">
+                        <div class="flex items-center justify-between pb-6 mb-6 border-b border-white/10">
+                            <div>
+                                <span class="text-xs font-mono text-cyanGlow uppercase">Engineering Benchmark</span>
+                                <h3 class="text-xl font-bold text-white">Transparent Media vs. Traditional SMD</h3>
+                            </div>
+                            <i data-lucide="cpu" class="w-8 h-8 text-cyanGlow"></i>
+                        </div>
+
+                        <div class="space-y-5 font-mono text-xs">
+                            <div>
+                                <div class="flex justify-between mb-1.5">
+                                    <span class="text-slate-300">NATURAL LIGHT TRANSMISSION</span>
+                                    <span class="text-cyanGlow font-bold">Up to 90% (vs. 0% Opaque)</span>
+                                </div>
+                                <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                                    <div class="bg-gradient-to-r from-blue-500 to-cyanGlow h-full w-[88%]"></div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="flex justify-between mb-1.5">
+                                    <span class="text-slate-300">STRUCTURAL DEAD-WEIGHT LOAD</span>
+                                    <span class="text-cyanGlow font-bold">12–15 kg/m² (vs. 45+ kg/m²)</span>
+                                </div>
+                                <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                                    <div class="bg-gradient-to-r from-blue-500 to-cyanGlow h-full w-[82%]"></div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="flex justify-between mb-1.5">
+                                    <span class="text-slate-300">3D-SMT™ SHEAR FORCE RESISTANCE</span>
+                                    <span class="text-cyanGlow font-bold">&ge; 40N (&plusmn;4kg per LED lamp)</span>
+                                </div>
+                                <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                                    <div class="bg-gradient-to-r from-blue-500 to-cyanGlow h-full w-[94%]"></div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="flex justify-between mb-1.5">
+                                    <span class="text-slate-300">INSTALLATION & MODULAR SERVICING SPEED</span>
+                                    <span class="text-cyanGlow font-bold">3.5x Faster Hand-Assembly</span>
+                                </div>
+                                <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                                    <div class="bg-gradient-to-r from-blue-500 to-cyanGlow h-full w-[90%]"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 p-4 rounded-xl bg-white/5 border border-white/10 text-xs text-slate-300 flex items-center space-x-3">
+                            <i data-lucide="shield-check" class="w-5 h-5 text-cyanGlow shrink-0"></i>
+                            <span>Engineered with edge-mounted PCB thermal dissipation to eliminate color aberration in high-ambient Indian temperatures.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product & Solution Verticals -->
+    <section id="solutions" class="py-24 max-w-7xl mx-auto px-6">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-cyanGlow font-mono text-xs uppercase tracking-widest block mb-3">// SYSTEM ARCHITECTURE</span>
+            <h2 class="text-3xl sm:text-5xl font-bold tracking-tight mb-4">Core Transparent Display Series</h2>
+            <p class="text-slate-400">
+                Modular, custom-pitch transparent visual systems tailored for curtain walls, retail storefronts, glass balustrades, and irregular architectural geometries.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Solution 1 -->
+            <div class="glass-card rounded-2xl p-8 flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-cyanGlow/10 border border-cyanGlow/30 flex items-center justify-center text-cyanGlow mb-6">
+                        <i data-lucide="building-2" class="w-6 h-6"></i>
+                    </div>
+                    <span class="text-xs font-mono text-cyanGlow uppercase tracking-wider">Curtain Wall & Atrium Series</span>
+                    <h3 class="text-2xl font-bold text-white mt-1 mb-3">Transparent LED Grille Display</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed mb-6">
+                        Installed directly behind glass facade beams. Engineered for massive architectural media walls, shopping mall atriums, and sightseeing elevators without obstructing interior views.
+                    </p>
+                </div>
+                <div class="border-t border-white/10 pt-4 font-mono text-xs text-slate-300 space-y-1.5">
+                    <div class="flex justify-between"><span>Transparency:</span><span class="text-cyanGlow">65% – 90%</span></div>
+                    <div class="flex justify-between"><span>Brightness:</span><span class="text-white">Up to 7,500 Nits</span></div>
+                    <div class="flex justify-between"><span>Series Alignment:</span><span class="text-slate-400">XRL / XF / NJ / NP</span></div>
+                </div>
+            </div>
+
+            <!-- Solution 2 -->
+            <div class="glass-card rounded-2xl p-8 flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-cyanGlow/10 border border-cyanGlow/30 flex items-center justify-center text-cyanGlow mb-6">
+                        <i data-lucide="sparkles" class="w-6 h-6"></i>
+                    </div>
+                    <span class="text-xs font-mono text-cyanGlow uppercase tracking-wider">Photoelectric Laminated Glass</span>
+                    <h3 class="text-2xl font-bold text-white mt-1 mb-3">Architectural Media Glass</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed mb-6">
+                        Structural tempered glass with embedded micro-LED matrices. Functions simultaneously as load-bearing safety glazing and a high-contrast digital canvas for balustrades and skybridges.
+                    </p>
+                </div>
+                <div class="border-t border-white/10 pt-4 font-mono text-xs text-slate-300 space-y-1.5">
+                    <div class="flex justify-between"><span>Application:</span><span class="text-cyanGlow">Balustrades & Overpasses</span></div>
+                    <div class="flex justify-between"><span>Protection:</span><span class="text-white">Anti-UV & Moisture Proof</span></div>
+                    <div class="flex justify-between"><span>Series Alignment:</span><span class="text-slate-400">NovoGlass / NSN / NE / NexBarrier</span></div>
+                </div>
+            </div>
+
+            <!-- Solution 3 -->
+            <div class="glass-card rounded-2xl p-8 flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-cyanGlow/10 border border-cyanGlow/30 flex items-center justify-center text-cyanGlow mb-6">
+                        <i data-lucide="shopping-bag" class="w-6 h-6"></i>
+                    </div>
+                    <span class="text-xs font-mono text-cyanGlow uppercase tracking-wider">Smart Retail & Visual Merchandising</span>
+                    <h3 class="text-2xl font-bold text-white mt-1 mb-3">Transparent Glass Posters</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed mb-6">
+                        Ultra-thin, plug-and-play see-through digital signage for luxury retail windows, automotive showrooms, and airport duty-free zones. Cloud-synchronized content management.
+                    </p>
+                </div>
+                <div class="border-t border-white/10 pt-4 font-mono text-xs text-slate-300 space-y-1.5">
+                    <div class="flex justify-between"><span>PCB Thickness:</span><span class="text-cyanGlow">&lt; 1.6mm Ultra-Slim</span></div>
+                    <div class="flex justify-between"><span>Deployment:</span><span class="text-white">Hanging / Floor-Standing</span></div>
+                    <div class="flex justify-between"><span>Series Alignment:</span><span class="text-slate-400">NexPoster / NexEsign / FantaSign</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Hardware Technology Section -->
+    <section id="technology" class="py-20 bg-gradient-to-b from-obsidian via-slate-900/80 to-obsidian border-y border-white/10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="max-w-3xl mb-14">
+                <span class="text-cyanGlow font-mono text-xs uppercase tracking-widest block mb-3">// PATENTED HARDWARE STANDARDS</span>
+                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight mb-4">Built on Foundational 3D-SMT™ Engineering</h2>
+                <p class="text-slate-400">
+                    Heurika deploys systems sourced exclusively from original patent holders with >400KK monthly single-bin lamp production capacity, ensuring zero color shift across multi-thousand-square-foot facades.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="p-6 rounded-2xl bg-white/[0.03] border border-white/10">
+                    <div class="text-cyanGlow font-mono text-sm mb-2">01 / 8-STAGE SOLDERING</div>
+                    <h4 class="text-lg font-bold text-white mb-2">Patented 3D-SMT™ Technology</h4>
+                    <p class="text-sm text-slate-400">
+                        Every PCB soldering plate undergoes a rigorous 8-stage surface treatment. Side-mounted LED lamps withstand up to 40N (&plusmn;4kg) of mechanical force before breaking loose.
+                    </p>
+                </div>
+                <div class="p-6 rounded-2xl bg-white/[0.03] border border-white/10">
+                    <div class="text-cyanGlow font-mono text-sm mb-2">02 / THERMAL CONDUCTIVITY</div>
+                    <h4 class="text-lg font-bold text-white mb-2">Uniform Copper Heat Dissipation</h4>
+                    <p class="text-sm text-slate-400">
+                        Mounting LED lamps on the PCB edge with internal conductive copper channels guarantees rapid heat transfer, evenly distributing IC load and preventing color aberration.
+                    </p>
+                </div>
+                <div class="p-6 rounded-2xl bg-white/[0.03] border border-white/10">
+                    <div class="text-cyanGlow font-mono text-sm mb-2">03 / OPTICAL CONTRAST</div>
+                    <h4 class="text-lg font-bold text-white mb-2">Matte Encapsulation & All-Black Housing</h4>
+                    <p class="text-sm text-slate-400">
+                        Single-bin, single-batch outdoor-grade lamps with anti-UV matte encapsulation and all-black housing deliver superior contrast ratios even against bright sky reflections.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Indian Turnkey Execution (Why Partner with Heurika) -->
+    <section id="execution" class="py-24 max-w-7xl mx-auto px-6">
+        <div class="mb-16">
+            <span class="text-cyanGlow font-mono text-xs uppercase tracking-widest block mb-3">// INDIA DELIVERY INFRASTRUCTURE</span>
+            <h2 class="text-3xl sm:text-5xl font-bold tracking-tight mb-4">End-to-End Local Execution</h2>
+            <p class="text-slate-400 max-w-2xl">
+                Deploying architectural media facades in India requires more than hardware shipping. Heurika manages the entire lifecycle from architectural blueprint specification to component-level servicing.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="glass-card p-7 rounded-2xl">
+                <i data-lucide="compass" class="w-8 h-8 text-cyanGlow mb-5"></i>
+                <h3 class="text-lg font-bold text-white mb-2">1. Blueprint Spec-In</h3>
+                <p class="text-sm text-slate-400 leading-relaxed">
+                    Direct collaboration with master architects, facade consultants, and commercial developers across Mumbai, Delhi-NCR, Bengaluru, and Hyderabad at the pre-tender stage.
+                </p>
+            </div>
+
+            <div class="glass-card p-7 rounded-2xl">
+                <i data-lucide="file-check-2" class="w-8 h-8 text-cyanGlow mb-5"></i>
+                <h3 class="text-lg font-bold text-white mb-2">2. BIS & Customs Command</h3>
+                <p class="text-sm text-slate-400 leading-relaxed">
+                    Complete handling of cross-border logistics, Bureau of Indian Standards (BIS) compliance, WPC clearances, and tariff optimization for seamless site delivery.
+                </p>
+            </div>
+
+            <div class="glass-card p-7 rounded-2xl">
+                <i data-lucide="wrench" class="w-8 h-8 text-cyanGlow mb-5"></i>
+                <h3 class="text-lg font-bold text-white mb-2">3. Structural & MEP Integration</h3>
+                <p class="text-sm text-slate-400 leading-relaxed">
+                    Certified field engineers managing curtain-wall load calculations, double-glazed unit (DGU) thermal HVAC coordination, and 3-phase power distribution.
+                </p>
+            </div>
+
+            <div class="glass-card p-7 rounded-2xl">
+                <i data-lucide="activity" class="w-8 h-8 text-cyanGlow mb-5"></i>
+                <h3 class="text-lg font-bold text-white mb-2">4. Local Spare Hub & SLAs</h3>
+                <p class="text-sm text-slate-400 leading-relaxed">
+                    Indian technical bench stocked with standardized modular spare parts, driver ICs, and power supplies—delivering rapid on-site replacement and 99.8% uptime.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Target Verticals -->
+    <section id="sectors" class="py-20 bg-slate-950 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <span class="text-cyanGlow font-mono text-xs uppercase tracking-widest block mb-2">// DEPLOYMENT ENVIRONMENTS</span>
+                    <h2 class="text-3xl font-bold text-white">High-Impact Indian Commercial Sectors</h2>
+                </div>
+                <p class="text-sm text-slate-400 max-w-md mt-4 md:mt-0">
+                    Tailored visual solutions for developers, luxury conglomerates, and public infrastructure authorities.
+                </p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
+                <div class="p-5 rounded-xl bg-white/[0.02] border border-white/10 flex items-center space-x-3">
+                    <i data-lucide="landmark" class="w-5 h-5 text-cyanGlow shrink-0"></i>
+                    <span>Grade-A Tech Parks & HQ Towers</span>
+                </div>
+                <div class="p-5 rounded-xl bg-white/[0.02] border border-white/10 flex items-center space-x-3">
+                    <i data-lucide="plane" class="w-5 h-5 text-cyanGlow shrink-0"></i>
+                    <span>International Airports & Metro Hubs</span>
+                </div>
+                <div class="p-5 rounded-xl bg-white/[0.02] border border-white/10 flex items-center space-x-3">
+                    <i data-lucide="gem" class="w-5 h-5 text-cyanGlow shrink-0"></i>
+                    <span>Luxury Malls & High-Street Flagships</span>
+                </div>
+                <div class="p-5 rounded-xl bg-white/[0.02] border border-white/10 flex items-center space-x-3">
+                    <i data-lucide="car" class="w-5 h-5 text-cyanGlow shrink-0"></i>
+                    <span>Automotive Experience Centers</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / Project Specification Form -->
+    <section id="contact" class="py-24 relative overflow-hidden border-t border-white/10">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="glass-card rounded-3xl p-8 sm:p-12 border border-cyanGlow/30">
+                <div class="grid lg:grid-cols-5 gap-10">
+                    <div class="lg:col-span-2 flex flex-col justify-between">
+                        <div>
+                            <span class="text-cyanGlow font-mono text-xs uppercase tracking-widest block mb-3">// INITIATE DIALOGUE</span>
+                            <h2 class="text-3xl font-bold text-white mb-4">Specify Heurika for Your Next Facade</h2>
+                            <p class="text-sm text-slate-400 leading-relaxed mb-8">
+                                Request CAD structural drawings, optical transparency samples, or schedule a technical consultation with our engineering team.
+                            </p>
+                        </div>
+
+                        <div class="space-y-4 text-sm font-mono text-slate-300">
+                            <div class="flex items-center space-x-3">
+                                <i data-lucide="map-pin" class="w-4 h-4 text-cyanGlow"></i>
+                                <span>Hyderabad • Bengaluru • Mumbai</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <i data-lucide="mail" class="w-4 h-4 text-cyanGlow"></i>
+                                <span>enterprise@heurika.in</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <i data-lucide="globe" class="w-4 h-4 text-cyanGlow"></i>
+                                <span>Global OEM Partner Network</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form onsubmit="event.preventDefault(); document.getElementById('form-status').classList.remove('hidden');" class="lg:col-span-3 space-y-4">
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-mono uppercase text-slate-400 mb-1.5">Full Name *</label>
+                                <input type="text" required placeholder="Anil..." class="w-full px-4 py-3 rounded-xl bg-obsidian/90 border border-white/15 text-white text-sm focus:outline-none focus:border-cyanGlow">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-mono uppercase text-slate-400 mb-1.5">Work Email *</label>
+                                <input type="email" required placeholder="name@company.com" class="w-full px-4 py-3 rounded-xl bg-obsidian/90 border border-white/15 text-white text-sm focus:outline-none focus:border-cyanGlow">
+                            </div>
+                        </div>
+
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-mono uppercase text-slate-400 mb-1.5">Organization Type</label>
+                                <select class="w-full px-4 py-3 rounded-xl bg-obsidian/90 border border-white/15 text-white text-sm focus:outline-none focus:border-cyanGlow">
+                                    <option>Architectural / Facade Consultant</option>
+                                    <option>Commercial Real Estate Developer</option>
+                                    <option>Global OEM / Manufacturing Partner</option>
+                                    <option>Luxury Retail / Brand</option>
+                                    <option>Turnkey AV Integrator</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-mono uppercase text-slate-400 mb-1.5">Application Series</label>
+                                <select class="w-full px-4 py-3 rounded-xl bg-obsidian/90 border border-white/15 text-white text-sm focus:outline-none focus:border-cyanGlow">
+                                    <option>Curtain Wall LED Grille Display</option>
+                                    <option>NovoGlass Photoelectric Balustrade</option>
+                                    <option>Retail Window Transparent Poster</option>
+                                    <option>Strategic OEM Distribution Inquiry</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-mono uppercase text-slate-400 mb-1.5">Project Scope / Inquiry Details</label>
+                            <textarea rows="3" placeholder="Specify approximate facade dimensions (sq.m), viewing distance, or partnership agenda..." class="w-full px-4 py-3 rounded-xl bg-obsidian/90 border border-white/15 text-white text-sm focus:outline-none focus:border-cyanGlow"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-cyanGlow to-blue-500 text-obsidian font-bold text-sm tracking-wide hover:opacity-95 transition">
+                            Submit Technical Inquiry
+                        </button>
+
+                        <div id="form-status" class="hidden p-3 rounded-lg bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 text-xs font-mono text-center">
+                            Inquiry logged. Our engineering desk will respond within 1 business day.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-10 border-t border-white/10 text-center text-xs text-slate-500 font-mono">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>&copy; 2026 HEURIKA VISUAL TECHNOLOGIES. ALL RIGHTS RESERVED.</div>
+            <div class="flex space-x-6">
+                <span>TRANSPARENT LED FACADES</span>
+                <span>•</span>
+                <span>PHOTOELECTRIC GLASS</span>
+                <span>•</span>
+                <span>INDIA TURNKEY SLA</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
