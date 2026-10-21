@@ -472,46 +472,51 @@
                         </div>
                     </div>
 
-                    <form onsubmit="event.preventDefault(); document.getElementById('form-status').classList.remove('hidden');" class="lg:col-span-3 space-y-4">
+                    <form id="heurika-form" action="https://api.web3forms.com/submit" method="POST" class="lg:col-span-3 space-y-4">
+                        <!-- Web3Forms Access Key & Subject Configuration -->
+                        <input type="hidden" name="access_key" value="9765941a-014b-40bf-99b4-b14cc43f9e8b">
+                        <input type="hidden" name="subject" value="New Technical Inquiry | Heurika Portal">
+                        <input type="hidden" name="from_name" value="Heurika Visual Technologies">
+
                         <div class="grid sm:grid-cols-2 gap-4">
                             <div>
                                 <label class="block text-xs font-mono uppercase text-slate-400 mb-1.5">Full Name *</label>
-                                <input type="text" required placeholder="Anil..." class="w-full px-4 py-3 rounded-xl bg-obsidian/90 border border-white/15 text-white text-sm focus:outline-none focus:border-cyanGlow">
+                                <input type="text" name="name" required placeholder="Full Name / Designation" class="w-full px-4 py-3 rounded-xl bg-obsidian/90 border border-white/15 text-white text-sm focus:outline-none focus:border-cyanGlow">
                             </div>
                             <div>
                                 <label class="block text-xs font-mono uppercase text-slate-400 mb-1.5">Work Email *</label>
-                                <input type="email" required placeholder="name@company.com" class="w-full px-4 py-3 rounded-xl bg-obsidian/90 border border-white/15 text-white text-sm focus:outline-none focus:border-cyanGlow">
+                                <input type="email" name="email" required placeholder="name@company.com" class="w-full px-4 py-3 rounded-xl bg-obsidian/90 border border-white/15 text-white text-sm focus:outline-none focus:border-cyanGlow">
                             </div>
                         </div>
 
                         <div class="grid sm:grid-cols-2 gap-4">
                             <div>
                                 <label class="block text-xs font-mono uppercase text-slate-400 mb-1.5">Organization Type</label>
-                                <select class="w-full px-4 py-3 rounded-xl bg-obsidian/90 border border-white/15 text-white text-sm focus:outline-none focus:border-cyanGlow">
-                                    <option>Architectural / Facade Consultant</option>
-                                    <option>Commercial Real Estate Developer</option>
-                                    <option>Global OEM / Manufacturing Partner</option>
-                                    <option>Luxury Retail / Brand</option>
-                                    <option>Turnkey AV Integrator</option>
+                                <select name="organization_type" class="w-full px-4 py-3 rounded-xl bg-obsidian/90 border border-white/15 text-white text-sm focus:outline-none focus:border-cyanGlow">
+                                    <option value="Architectural / Facade Consultant">Architectural / Facade Consultant</option>
+                                    <option value="Commercial Real Estate Developer">Commercial Real Estate Developer</option>
+                                    <option value="Global OEM / Manufacturing Partner">Global OEM / Manufacturing Partner</option>
+                                    <option value="Luxury Retail / Brand">Luxury Retail / Brand</option>
+                                    <option value="Turnkey AV Integrator">Turnkey AV Integrator</option>
                                 </select>
                             </div>
                             <div>
                                 <label class="block text-xs font-mono uppercase text-slate-400 mb-1.5">Application Series</label>
-                                <select class="w-full px-4 py-3 rounded-xl bg-obsidian/90 border border-white/15 text-white text-sm focus:outline-none focus:border-cyanGlow">
-                                    <option>Curtain Wall LED Grille Display</option>
-                                    <option>NovoGlass Photoelectric Balustrade</option>
-                                    <option>Retail Window Transparent Poster</option>
-                                    <option>Strategic OEM Distribution Inquiry</option>
+                                <select name="application_series" class="w-full px-4 py-3 rounded-xl bg-obsidian/90 border border-white/15 text-white text-sm focus:outline-none focus:border-cyanGlow">
+                                    <option value="Curtain Wall LED Grille Display">Curtain Wall LED Grille Display</option>
+                                    <option value="NovoGlass Photoelectric Balustrade">NovoGlass Photoelectric Balustrade</option>
+                                    <option value="Retail Window Transparent Poster">Retail Window Transparent Poster</option>
+                                    <option value="Strategic OEM Distribution Inquiry">Strategic OEM Distribution Inquiry</option>
                                 </select>
                             </div>
                         </div>
 
                         <div>
                             <label class="block text-xs font-mono uppercase text-slate-400 mb-1.5">Project Scope / Inquiry Details</label>
-                            <textarea rows="3" placeholder="Specify approximate facade dimensions (sq.m), viewing distance, or partnership agenda..." class="w-full px-4 py-3 rounded-xl bg-obsidian/90 border border-white/15 text-white text-sm focus:outline-none focus:border-cyanGlow"></textarea>
+                            <textarea name="message" rows="3" placeholder="Specify approximate facade dimensions (sq.m), viewing distance, or partnership agenda..." class="w-full px-4 py-3 rounded-xl bg-obsidian/90 border border-white/15 text-white text-sm focus:outline-none focus:border-cyanGlow"></textarea>
                         </div>
 
-                        <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-cyanGlow to-blue-500 text-obsidian font-bold text-sm tracking-wide hover:opacity-95 transition">
+                        <button id="submit-btn" type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-cyanGlow to-blue-500 text-obsidian font-bold text-sm tracking-wide hover:opacity-95 transition">
                             Submit Technical Inquiry
                         </button>
 
@@ -523,6 +528,31 @@
             </div>
         </div>
     </section>
+
+    <script>
+        const form = document.getElementById('heurika-form');
+        const statusBanner = document.getElementById('form-status');
+        const submitBtn = document.getElementById('submit-btn');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            submitBtn.textContent = 'Transmitting Inquiry...';
+            submitBtn.disabled = true;
+
+            const formData = new FormData(form);
+            const response = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: formData
+            });
+
+            if (response.ok) {
+                statusBanner.classList.remove('hidden');
+                form.reset();
+            }
+            submitBtn.textContent = 'Submit Technical Inquiry';
+            submitBtn.disabled = false;
+        });
+    </script>
 
     <!-- Footer -->
     <footer class="py-10 border-t border-white/10 text-center text-xs text-slate-500 font-mono">
